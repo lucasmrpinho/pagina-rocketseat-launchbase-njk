@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% block head %}
+        
+        <title>Rocketseat</title>
+
+        {% endblock %}
+
+        <link rel="stylesheet" href="/styles.css">
+        
+        <link rel="icon" href="https://ik.imagekit.io/LucasPinho/favicon_FBw8xg83V.ico" type="image/x-icon" />
+       
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="links">
+
+                <a href="/">Início</a>
+                <a href="/cursos">Conteúdos</a>
+                <a href="https://discordapp.com/invite/gCRAFhc" target="/blank">Comunidade</a>
+                <a href="mailto:oi@rocketseat.com.br" target="/blank">E-mail</a>
+                <a href="tel:+5547992078767" target="/blank">Telefone</a>
+                
+            </div>
+
+        </header>
+
+        {% block content %}{% endblock %}
+    
+
+    </body>
+
+</html>

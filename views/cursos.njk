@@ -1,0 +1,62 @@
+{% extends "layouts.njk" %}
+
+
+{% block head %}
+
+<title>Rocketseat - Conteúdos</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block content %}      
+
+        <div id="wrapper">
+            <h1>Cursos</h1>
+        </div>
+
+        
+        <section class="cards">
+        {%for card in courses %}
+
+            <div class="card" id="{{card.id}}">
+                <div class="card_image-container">
+                    <img src="https://skylab.rocketseat.com.br/static/{{card.image_id}}.svg" alt="starter">
+                </div>
+                <div class="card_content">
+                    <p>{{card.title}}</p>
+                </div> 
+                <div class="card_info">
+                    <p>{{card.size}}</p>
+                    <p class="price">{{card.price}}</p>
+                </div>
+            </div>
+
+        {% endfor %}
+        </section>
+        
+
+        <div class="modal_overlay">
+
+            <div class="modal">
+
+                <a class="modal_close">
+                    <i class="material-icons">close</i>
+                </a>
+
+                <a class="modal_max">
+                    <i class="material-icons">maximize</i>
+                </a>
+
+                <div class="modal_content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="/scripts.js"></script>
+
+{% endblock %}
