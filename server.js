@@ -46,25 +46,28 @@ server.get("/cursos", function(req,res){
  })
 
 
- server.get("/card", function (req,res){
-     server.use(function(req,res){
-         res.status(404).render("not-found")
-     })
+ server.get("/card/:id", function(req, res) {
+    server.use(function(req,res){
+        res.status(404).render("not-found")
+    })
 
-     const id = req.query.id
-     
-     const card = cards.find(function(card){
-         if (card.id == id){
-            return true
-         }
-     })
-     
-     if (!card){
-         return res.send("Page not found!")
-     }
+    const id = req.params.id
 
-     return res.render('card', { card: card })
+    const card = cards.find(function(card){
+        if (card.id == id){
+        return true
+        }
+    })
+    
+    if (!card){
+        return res.send("Page not found!")
+    }
+
+    return res.render('card', {card} );
  })
+
+ 
+
 
 server.listen(5000, () =>{
     console.log('server is running')
