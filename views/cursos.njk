@@ -21,8 +21,11 @@
         {%for card in courses %}
 
             <div class="card" id="{{card.id}}">
-                <div class="card_image-container">
+                <div class="card_image-container {{'featured_card' if card.featured}}">
                     <img src="https://skylab.rocketseat.com.br/static/{{card.image_id}}.svg" alt="starter">
+                {% if card.featured %}
+                    <div class="featured">Últimas Vagas</div>
+                {% endif %}
                 </div>
                 <div class="card_content">
                     <p>{{card.title}}</p>

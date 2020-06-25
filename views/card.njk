@@ -1,0 +1,36 @@
+{% extends "layouts.njk" %}
+
+
+{% block head %}
+
+<title>{{card.id}}</title>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block content %}      
+
+        <div id="wrapper">
+            <h1>Curso</h1>
+        </div>
+        
+        <section class="solocard">
+            <div class="card" id="{{card.id}}">
+                <div class="solocard-container">
+                     <iframe src="https://rocketseat.com.br/{{card.id}}" frameborder="0"></iframe>
+                </div>
+                <div class="card_content">
+                    <p>{{card.title}}</p>
+                </div> 
+                <div class="card_info">
+                    <p>{{card.size}}</p>
+                    <p class="price">{{card.price}}</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="/scripts.js"></script>
+
+{% endblock %}

@@ -2,7 +2,7 @@
 
 {% block head %}
 
-<title>Rocketseat - Iniício</title>
+<title>Rocketseat - Início</title>
 
 {% endblock %}
 
@@ -17,7 +17,7 @@
 
             <ul>
                 {% for tec in about.tecnologias %}
-                <li>tec</li> 
+                    <li>{{tec}}</li> 
                 {% endfor %}
             </ul>
 
@@ -28,7 +28,7 @@
         <div id="footer-links" class="links">
 
             {% for link in about.links %}
-            <a href="{{link.url}}" target="/blank"> {{link.nome}}</a>
+                <a href="{{link.url}}" target="/blank"> {{link.name}}</a>
             {% endfor %}
 
         </div>
